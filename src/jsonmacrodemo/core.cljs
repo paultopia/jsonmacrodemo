@@ -8,7 +8,8 @@
 (def data (m/get-data "json.json"))
 
 (defn home-page []
-  [:div [:h2 (:greeting data)]])
+  [:div [:h2 (:greeting data)]
+   (m/from-template "template.html" "name.json")])
 
 ;; -------------------------
 ;; Initialize app
